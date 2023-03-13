@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(37, 40, 46);
+}
+
+h1 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 3rem;
+    color: white;
+}
+
+h2 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 2rem;
+    color: white;
+}
+a {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.2rem;
+    color: white;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 5% 95%;
+    grid-template-areas: 
+    "he li";
+    align-items: start;
+}
+
+header {
+    grid-area: he;
+    height: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(24, 25, 27);
+}
+
+#link_list {
+    grid-area: li; 
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: rgb(24, 25, 27); 
+}
+
+#links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+#links li {
+    margin: 10px;
+}
+#links a {
+    position: relative;
+    left: -20px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+#start_background {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+#start_title {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+#start_title h2 {
+    font-style: italic;
+}
+
+#filler {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(24, 25, 27);
+}
+
+#game_list {
+    grid-area: ga;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 500px 500px;
+    grid-template-areas: 
+    "g1 g2"
+    "g3 . ";
+    justify-content: center;
+}
+
+#game_list a {
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    text-decoration: none;
+}
+
+#game_1 {
+    grid-area: g1;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgb(0, 0, 0)), url("/img/othello_1.png");;
+}
+#game_1:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url("/img/othello_1.png");;
+}
+#game_2 {
+    grid-area: g2;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgb(0, 0, 0)), url("/img/terrain_game_1.png");;
+}
+#game_2:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url("/img/terrain_game_1.png");;
+}
+#game_3 {
+    grid-area: g3;
+    background-color: rgb(209, 106, 106);
+}
+
+@media screen and (max-width: 600px) {
+    #hedader {
+        grid-template-areas: none;
+    }
+
+    header {
+        display: none;
+    }
+    #burger_menu {
+        z-index: 1;
+        display: block;
+        position: fixed;
+        left: 80vw;
+        top: 2vh;
+        cursor: pointer;
+    }
+    #burger_menu div {
+        background-color: rgb(255, 255, 255);
+        width: 40px;
+        height: 10px;
+        margin: 10px;
+    }
+
+    #link_list {
+        z-index: 1;
+        position: fixed;
+        top: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        transition: 0.2s;
+    }
+
+    .link_list_visible {
+        transform: translateY(-100vh);
+    }
+    
+    #link_list ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #link_list ul li {
+        margin-top: 10vh;
+        display: initial;
+        color: rgb(255, 255, 255);   
+    }
+
+    #game_list {
+        grid-template-columns: 100%;
+        grid-template-rows: 500px 500px 500px 500px;
+        grid-template-areas: 
+        "g1"
+        "g2"
+        "g3";
+    }
+    #game_list a {
+        margin: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
