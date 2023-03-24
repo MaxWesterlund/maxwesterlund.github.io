@@ -3,47 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
     <div id="header">
         <header>
-            <h2>Games</h2>
+            <h2>Othello</h2>
             <div></div>
         </header>
         <nav id="link_list" class="link_list_closed">
             <ul id="links">
+                <li><a id="start" class="header_link" href="index.html">Start</a></li>
                 <li>
-                    <a id="games" class="header_link" href="index.html">
-                        Start
+                    <a id="games" class="header_link" href="games.html">
+                        Games
+                        <a id="othello" class="hide" href="othello.html"><p>Othello</p></a>
+                        <a id="terrain" class="hide" href="#"><p>Terrain</p></a>
                     </a>
                 </li>
                 <li><a id="contact" class="header_link" href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
+
     <div id="burger_menu">
         <div id="burger_line_1"></div>
         <div id="burger_line_2"></div>
     </div>
-    <nav id="game_list">
-        <a id="game_1" href="othello.html">
-            <h2>Othello Bot</h2>
-            <p>Challange the bot.</p>
-        </a>
-        <a id="game_2" href="#">
-            <h2>Terrain Game</h2>
-            <p>Explore a unique world. (in development)</p>
-        </a>
-        <a id="game_3" href="#">
-            <h2>Name</h2>
-            <p>Description</p>
-        </a>
-    </nav>
-    
+
     <script src="js/app.js"></script>
-</head>
-<body>
-    
 </body>
 </html>
