@@ -22,13 +22,13 @@ h2 {
 }
 a {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     text-decoration: none;
     color: white;
 }
 p {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: rgb(167, 167, 167)
 }
 
@@ -165,10 +165,74 @@ p {
 }
 #game_3 {
     grid-area: g3;
-    background-color: rgb(209, 106, 106);
+    background-color: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+
+#game_grid {
+    display: grid;
+    grid-template-columns: 30vw 30vw;
+    grid-template-areas: 
+    "ti ti"
+    "p1 p1"
+    "i1 p2"
+    "qu qu"
+    "li li";
+    justify-content: center;
+}
+#game_title {
+    grid-area: ti;
+    text-align: center;
+    margin: 20px;
+}
+#game_paragraph_1 {
+    grid-area: p1;
+    text-align: center;
+}
+#game_image_1 {
+    grid-area: i1;
+    justify-self: end;
+    margin: 20px;
+
+    width: 30vw;
+}
+#game_paragraph_2 {
+    grid-area: p2;
+    margin: 20px;
+}
+
+#game_quote {
+    grid-area: qu;
+
+    margin: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#game_quote h2 {
+    text-align: center;
+    font-style: italic;
+}
+#game_quote p {
+    text-align: center;
+}
+
+#game_git_link {
+    grid-area: li;
+    justify-self: center;
+    margin: 20px;
+}
+#game_git_link p {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {
+    a {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
     #hedader {
         display: none;
         grid-template-areas: none;
@@ -235,7 +299,7 @@ p {
 
 
     #game_list {
-        grid-template-columns: 100%;
+        grid-template-columns: 100vw;
         grid-template-rows: 500px 500px 500px 500px;
         grid-template-areas: 
         "g1"
@@ -246,5 +310,36 @@ p {
         margin: 0px;
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+
+    #game_grid {
+        grid-template-columns: 100vw;
+        grid-template-areas: 
+        "ti"
+        "p1"
+        "i1"
+        "p2"
+        "qu"
+        "li";
+        justify-content: end;
+    }
+    #game_title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #game_paragraph_1 {
+        text-align: center;
+        margin: 20px;
+    }
+    #game_image_1 {
+        justify-self: center;
+        margin: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100vw;
+    }
+    #game_paragraph_2 {
+        text-align: center;
+        margin: 20px;
     }
 }
