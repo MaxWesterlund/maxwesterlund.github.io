@@ -115,18 +115,87 @@ p {
     top: 25%;
     left: 50%;
     transform: translate(-50%, -25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #start_title h2 {
     font-style: italic;
+    align-self: start;
+}
+#read_more_arrow {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#filler {
+#read_more_arrow svg {
+    fill: rgb(255, 255, 255);
+    transform: scale(1.3, 1);
+}
+
+#start_grid {
     position: absolute;
     top: 100vh;
     width: 100%;
     height: 1000px;
+
+    display: grid;
+    grid-template-columns: 35vw 35vw;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "p1 i1"
+    "i2 p2";
+
+    justify-content: center;
+    align-items: start;
+
     background-color: rgb(24, 25, 27);
 }
+
+#start_paragraph_1 {
+    grid-area: p1;
+
+    margin: 40px;
+}
+#start_paragraph_1 h1 {
+    text-align: end;
+    margin-top: 20px;
+}
+#start_paragraph_1 p {
+    text-align: end;
+    margin-top: 20px;
+}
+#start_image_1 {
+    grid-area: i1;
+
+    margin: 40px;
+
+    transform: scale(1.5);
+    image-rendering: crisp-edges;
+}
+#start_image_2 {
+    grid-area: i2;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+#start_paragraph_2 {
+    grid-area: p2;
+}
+#start_paragraph_2 h1 {
+    margin-top: 20px;
+}
+#start_paragraph_2 p {
+    margin: 20px;
+}
+
 
 #game_list {
     grid-area: ga;
@@ -295,6 +364,71 @@ p {
 
     .sublink {
         margin-top: 0px;
+    }
+
+    #read_more_arrow {
+        top: 80%;
+    }
+
+    #read_more_arrow h2 {
+        text-align: center;
+    }
+    
+    #read_more_arrow svg {
+        fill: rgb(255, 255, 255);
+        transform: scale(1.3, 1);
+    }
+
+    #start_grid {
+        position: absolute;
+        top: 100vh;
+        width: 100%;
+        height: 1000px;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "p1"
+        "i1"
+        "p2"
+        "i2";
+    
+        justify-content: center;
+        align-items: start;
+    
+        background-color: rgb(24, 25, 27);
+    }
+    
+    #start_paragraph_1 {
+        grid-area: p1;
+    
+        margin: 40px;
+    }
+    #start_paragraph_1 h1 {
+        text-align: center;
+    }
+    #start_paragraph_1 p {
+        text-align: center;
+    }
+    #start_image_1 {
+    }
+    #start_image_2 {
+        grid-area: i2;
+    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+    }
+    #start_paragraph_2 {
+        grid-area: p2;
+    }
+    #start_paragraph_2 h1 {
+        text-align: center;
+    }
+    #start_paragraph_2 p {
+        text-align: center;
     }
 
 
