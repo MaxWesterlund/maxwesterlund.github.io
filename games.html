@@ -3,52 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
-    <title>Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Westerlund | Games</title>
     <link rel="stylesheet" href="css/style.css">
-    <div id="header">
-        <header>
-            <h2>Games</h2>
-            <div></div>
-        </header>
-        <nav id="link_list" class="link_list_closed">
-            <ul id="links">
-                <li>
-                    <a id="games" class="header_link" href="index.html">
-                        Start
-                    </a>
-                </li>
-                <li><a id="contact" class="header_link" href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div id="burger_menu">
-        <div id="burger_line_1"></div>
-        <div id="burger_line_2"></div>
-    </div>
-    <nav id="game_list">
-        <a id="game_1" href="othello.html">
-            <h2>Othello</h2>
-            <p>Test your skills against a advanced opponent.</p>
-        </a>
-        <a id="game_2" href="terrain.html">
-            <h2>Terrain Project</h2>
-            <p>Explore a unique world. (in development)</p>
-        </a>
-        <a id="game_3" href="#">
-            <h2>More coming soon!</h2>
-            <p></p>
-        </a>
-    </nav>
-
-    <div id="burger_menu">
-        <div id="burger_line_1"></div>
-        <div id="burger_line_2"></div>
-    </div>
-    
-    <script src="js/header.js"></script>
 </head>
 <body>
-    
+    <div id="games_grid">
+        <div id="header">
+            <nav id="link_list" class="link_list_closed">
+                <a id="contact" class="header_link" href="contact.html"><h3>Contact</h3></a>
+                <a id="games" class="header_link" href="games.html"><h3>Games</h3></a>
+                <a id="start" class="header_link" href="index.html"><h3>Start</h3></a>
+            </nav>
+            <img id="header_logo" src="img/logo.png">
+        </div>
+            
+        <div class="page_title">
+            <h1>Games & Projects</h1>
+            <h2>All Games</h2>
+        </div>
+
+        <nav id="game_list">
+            <section id="games_text">
+                <h2>How I Make Games</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sapiente animi, numquam corrupti officiis sint at explicabo maxime quo? Rem dolorum ea voluptas vel. Molestias et nam, laboriosam corporis perferendis repudiandae unde quo quas exercitationem id sunt facere aspernatur quod est cum velit veniam tempore modi quibusdam sit similique numquam expedita voluptatibus. Iusto ipsum dolorum, perspiciatis facilis numquam in possimus sapiente optio dolorem! Est eos nulla porro ea repellendus voluptatem laudantium quibusdam laboriosam iste ipsa, hic dolore earum dignissimos, architecto perspiciatis animi. Excepturi distinctio blanditiis unde aperiam. Obcaecati in dolores inventore ullam quam maiores consequatur, dolorum voluptatum cupiditate, minima delectus.
+                </p>
+            </section>
+
+            <a class="game" style="grid-area: g1;" href="flyscape.html">
+                <h3>Flyscape</h3>
+                <img src="img/flyscape_cover.png">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, commodi!</p>
+                </div>
+            </a>
+            <a class="game" style="grid-area: g2;" href="maze.html">
+                <h3>Maze</h3>
+                <img src="img/maze_cover.png">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, commodi!</p>
+                </div>
+            </a>
+            <a class="game" style="grid-area: g3;" href="#">
+                <h3>Othello</h3>
+                <img src="img/othello_cover.png">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, commodi!</p>
+                </div>
+            </a>
+            <a class="game" style="grid-area: g4;" href="https://max-westerlund.itch.io/" target="_blank">
+                <h3>Itch Page</h3>
+                <img src="img/itch_cover.jpeg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, commodi!</p>
+                </div>
+            </a>
+        </nav>
+    </div>
+
+    <div id="burger_menu" class="burger_menu_inactive">
+        <div></div>
+        <div></div>
+    </div>
+
+    <script src="js/game_description.js"></script>
+    <script src="js/burger_menu.js"></script>
+    <script src="js/theme_picker.js"></script>
 </body>
 </html>

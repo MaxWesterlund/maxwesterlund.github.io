@@ -8,72 +8,61 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="header">
-        <header>
-            <h2>Start</h2>
-            <div></div>
-        </header>
-        <nav id="link_list" class="link_list_closed">
-            <ul id="links">
-                <li>
-                    <a id="games" class="header_link" href="games.html">
-                        Games
-                        <a id="othello" class="hide" href="othello.html"><p>Othello</p></a>
-                        <a id="terrain" class="hide" href="terrain.html"><p>Terrain</p></a>
-                    </a>
-                </li>
-                <li><a id="contact" class="header_link" href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <img id="start_background" src="img/terrain.jpeg" alt="image of obscure topology">
-     
-    <div id="start_title">
-        <h1>Max Westerlund</h1>
-        <h2>Game Dev</h2>
-    </div> 
-    
-    <div id="read_more_arrow">
-        <h2>Scroll for more</h2>
-        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M480 892 216 627l66-66 198 199 198-199 66 66-264 265Zm0-276L216 352l66-67 198 199 198-199 66 67-264 264Z"/></svg>        
-    </div>
-
     <div id="start_grid">
-        <div id="start_paragraph_1">
-            <h1>About Me</h1>
-            <p>
-                Hi there! My name is Max Westerlund, and I am a game developer who specializes in using Unity and C# to create immersive and engaging games. I have a passion for exploring various concepts through my games, and I'm always on the lookout for new and exciting ideas to incorporate into my projects. <br> <br>
-                
-                With a focus on creating games that are both entertaining and thought-provoking, I strive to provide players with a unique and memorable gaming experience. I believe that games have the power to inspire and connect people from all walks of life, and I am committed to using my skills to create games that are inclusive and accessible to all. <br> <br>
-                
-                Thank you for taking the time to learn a little bit about me, and I look forward to sharing my latest game projects with you soon!
-            </p>
+        <div id="header">
+            <nav id="link_list" class="link_list_closed">
+                <a id="contact" class="header_link" href="contact.html"><h3>Contact</h3></a>
+                <a id="games" class="header_link" href="games.html"><h3>Games</h3></a>
+                <a id="start" class="header_link" href="index.html"><h3>Start</h3></a>
+            </nav>
+            <img id="header_logo" src="img/logo.png">
         </div>
-        <img id="start_image_1" src="img/fly.gif" alt="A pixelart animation of a fly.">
-        <div id="start_paragraph_2">
-            <h1>My Software</h1>
-            <p>
-                As a Unity game developer, I find Visual Studio Code to be an incredibly useful code editor. Its customizable interface and powerful features make it easy to write and debug code directly within the editor. Plus, it supports the primary language used in Unity development - C# - making it a perfect choice for my workflow. <br> <br>
+            
+        <div class="page_title">
+            <h1>Max Westerlund</h1>
+            <h2>Game Dev</h2>
+        </div> 
 
-In addition to Visual Studio Code, I also rely on GitHub to manage my projects and collaborate with other developers. The version control system allows me to keep track of changes made to code over time, which is especially important when working on large projects with other team members. With GitHub, I can easily share my code with others and showcase my work to the wider community. <br> <br>
+        <div id="start_content">
+            <a id="current_game" href="flyscape.html">
+                <h3>Check out the latest game!</h3>
+                <img src="img/flyscape_start_cover.png" alt="Cover art for flyscape.">
+            </a>
 
-Overall, the combination of Visual Studio Code and GitHub provides me with a powerful toolset that makes Unity game development much more efficient and collaborative. I highly recommend these tools to any other Unity developers looking to improve their workflow and streamline their projects.
-            </p>
-        </div>
-        <div id="start_image_2">
-            <img src="img/unity_logo.png" alt="The unity logo">
-            <img src="img/vscode_logo.png" alt="The visual stuido code logo">
-            <img src="img/github_logo.png" alt="The github_logo">
+            <section id="start_text">
+                <h2>About Me</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque ipsum laboriosam minima at animi ex ducimus et necessitatibus cum, quidem quia commodi suscipit doloremque, mollitia alias ab harum provident quod dolores exercitationem deleniti. Magni sint provident ex totam accusantium ratione possimus, optio commodi consequuntur quae iusto molestiae dicta id esse culpa, illum tempore nemo? Ipsa, accusamus repellendus temporibus neque repudiandae tempore porro? Officia, consectetur delectus quae, rem ex culpa nam consequuntur iste ipsum laboriosam vitae a ducimus perferendis beatae sint eveniet eligendi hic suscipit enim quidem possimus tempora nemo! Odit obcaecati dolores dolor, unde ad alias praesentium molestias expedita pariatur.
+                </p>
+            </section>
+
+            <div id="theme_picker">
+                <h3>Pick A Website Theme!</h3>
+                <div id="dracula_theme" class="color_theme_button" style="grid-area: t1">
+                    <div id="dracula_1"></div>
+                    <div id="dracula_2" style="transform: rotate(180deg)"></div>
+                </div>
+                <div id="palenight_theme" class="color_theme_button" style="grid-area: t2">
+                    <div id="palenight_1"></div>
+                    <div id="palenight_2" style="transform: rotate(180deg);"></div>
+                </div>
+                <div id="dark_theme" class="color_theme_button" style="grid-area: t3">
+                    <div id="dark_1"></div>
+                    <div id="dark_2" style="transform: rotate(180deg);"></div>
+                </div>
+            </div> 
         </div>
     </div>
 
-    <div id="burger_menu">
-        <div id="burger_line_1"></div>
-        <div id="burger_line_2"></div>
+    <div id="burger_menu" class="burger_menu_inactive">
+        <div></div>
+        <div></div>
     </div>
 
-    <script src="js/header.js"></script>
-    <script src="js/start.js"></script>
+    <canvas id="start_background_canvas"></canvas>
+
+    <script src="js/start_canvas.js"></script>
+    <script src="js/burger_menu.js"></script>
+    <script src="js/theme_picker.js"></script>
 </body>
 </html>
